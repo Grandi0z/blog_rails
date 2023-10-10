@@ -1,4 +1,3 @@
 class MainController < ApplicationController
-  def users
-  end
+  def users; end
 end
