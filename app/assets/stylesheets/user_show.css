@@ -1,0 +1,22 @@
+div.user_bio {
+  min-height: 7rem;
+}
+
+div.user_posts {
+  display: flex;
+  flex-direction: column;
+}
+
+div.u_post_details {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+
+div.u_post_reactions {
+  align-self: flex-end;
+}
+
+#btn_see_all {
+  margin: 0 43%;
+}

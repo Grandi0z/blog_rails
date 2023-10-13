@@ -8,8 +8,8 @@ class Post < ApplicationRecord
 
   after_save :update_counter_post
 
-  def self.five_recents_comments(post_id)
-    Comment.where(post_id:).limit(5).order(created_at: :desc)
+  def five_recents_comments
+    Comment.where(post_id: id).limit(5).order(created_at: :desc)
   end
 
   private
