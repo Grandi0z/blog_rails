@@ -1,1 +1,18 @@
 <h1>Show a user</h1>
+<div class='user_profil'>
+    <%= render partial: "partials/user_profil", locals: { user: @user } %>
+    <div class='user_bio'>
+    <h3>Bio: <h3>
+        <%=@user.bio%>
+    </div>
+    <div class='user_posts'>
+        <ul id='users_list'>
+            <% @user.three_recent_posts.each_with_index do |post, index| %>
+                <li>
+                    <%= render partial: "partials/post_item", locals: { post: post, index:index } %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+    <%= link_to 'See all posts', user_posts_path(@user.id), method: :get, class: 'btn btn-primary'%>
+</div>

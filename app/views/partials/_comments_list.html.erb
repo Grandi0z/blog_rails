@@ -1,0 +1,11 @@
+<div class='p_comments'>
+  <% if comments.empty? || comments.nil? %>
+    <span class='comment_item'><%= "No comment yet" %></span>
+  <% else %>
+    <ul class='list'>
+      <% comments.each_with_index do |comment, index| %>
+        <li class='comment_item'><%= comment.author.name %>: <%= comment.text %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

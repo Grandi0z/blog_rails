@@ -1,2 +1,20 @@
-<h1>Here is a list of posts for a given user
-</h1>
+<h1>Here is a list of posts for a given user</h1>
+<div class='user_profil'>
+  <%= render partial: "partials/user_profil", locals: { user: @user } %>
+  <div class='user_posts'>
+  <%if @posts.present?%>
+    <ul id='users_list'>
+      <% @posts.each_with_index do |post, index| %>
+        <li>
+          <%= render partial: "partials/post_item", locals: { post: post, index:index } %>
+          <%comments=post.five_recents_comments%>
+          <%= render partial: "partials/comments_list", locals: { comments: comments} %>
+        </li>
+      <% end %>
+    </ul>
+  <%else%>
+    <%='No post'%>
+  <%end%>
+  </div>
+  <button id='btn_see_all'>Pagination</button>
+</div>

@@ -1,0 +1,17 @@
+<div class='u_post_item'>
+  <h4 class='u_post_title'>
+    <%= link_to user_post_path(post.author,post) do %>
+      Post <%=index + 1%>: <%=post.title%>
+    <%end%>
+
+  </h4>
+  <div class='u_post_details'>
+    <div class='u_post_text'>
+      <%=post.text%>
+    </div>
+    <div class='u_post_reactions'>
+      <span>Comment: <%=post.comments_counter%>, </span>
+      <span>Like: <%=post.likes_counter%> </span>
+    </div>
+  </div>
+</div>
