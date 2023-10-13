@@ -7,7 +7,7 @@
     </div>
     <div class='user_posts'>
         <ul id='users_list'>
-            <% @posts.each_with_index do |post, index| %>
+            <% @user.three_recent_posts.each_with_index do |post, index| %>
                 <li>
                     <%= render partial: "partials/post_item", locals: { post: post, index:index } %>
                 </li>
