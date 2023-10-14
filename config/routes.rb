@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   root 'users#index'
 
   scope '/' do 
-    resources :users, only: [:index, :show] do 
-      resources :posts, only: [:index, :show]
+    resources :users do 
+      resources :posts do 
+        resources :comments, only:[:new, :create]
+        resources :likes, only:[:new, :create]
+      end
     end
   end
 end

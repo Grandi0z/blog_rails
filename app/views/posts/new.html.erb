@@ -1,0 +1,18 @@
+<h1>New post</h1>
+<%= form_with model: @post, url: user_posts_path(@user), method: :post, local: true do |f| %>
+  <div>
+    <%= f.label :title%><br>
+    <%= f.text_field :title%>
+  </div>
+  <div>
+    <%= f.label :text%><br>
+    <%= f.text_area :text%>
+  </div>
+  <div>
+    <%=f.submit 'Post'%>
+  </div>
+<%end%>
+<%# In case we have a error %>
+<%= render partial: "partials/errors", locals: { errors: @post.errors } %>
+
+
