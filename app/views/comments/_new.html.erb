@@ -1,0 +1,11 @@
+<%= form_with model: @comment, url: user_post_comments_path(@current_user.id, @post.id), method: :post, local: true do |f| %>
+      <div>
+        <%= f.label :text%><br>
+        <%= f.text_area :text%>
+      </div>
+      <div>
+        <%=f.submit 'Comment'%>
+      </div>
+<%end%>
+
+<%= render partial: "partials/errors", locals: { errors: @comment.errors } %>

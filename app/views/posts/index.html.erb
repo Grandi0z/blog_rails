@@ -2,6 +2,7 @@
 <div class='user_profil'>
   <%= render partial: "partials/user_profil", locals: { user: @user } %>
   <div class='user_posts'>
+    <%= link_to 'Add Post', new_user_post_path(@current_user.id) %>
   <%if @posts.present?%>
     <ul id='users_list'>
       <% @posts.each_with_index do |post, index| %>

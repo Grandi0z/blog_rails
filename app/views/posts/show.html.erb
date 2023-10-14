@@ -1,14 +1,25 @@
 <h1>Show a posta of a given user</h1>
+<%# in case we have flash %>
+<% flash.each do |type, message| %>
+  <div class="alert alert-<%= type %>"><%= message %></div>
+<% end %>
 <div id="post_container">
   <div class='u_post_reactions'>
-      <span>Comment: <%=@post.comments_counter%>, </span>
-      <span>Like: <%=@post.likes_counter%> </span>
-   </div>
-   <div class="post_text">
-   <h3>
-     <%=@post.title%>
-   </h3>
+    <span>Comment: <%=@post.comments_counter%>, </span>
+    <span>Like: <%=@post.likes_counter%> </span>
+  </div>
+  <div class="post_text">
+    <h3>
+      <%=@post.title%>
+    </h3>
     <%= @post.text %>
+  </div>
+  <div id='add_like'>
+    <%=button_to 'Like', user_post_likes_path(@current_user.id, @post), method: :post %>
+  </div>
+  <div id='add_comment'>
+    <%= render 'comments/new' %>
   </div>
   <%= render partial: "partials/comments_list", locals: { comments: @comments} %>
 </div>
+
