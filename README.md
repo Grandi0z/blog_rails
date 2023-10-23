@@ -93,7 +93,21 @@ Run the following command inside the project folder:
 
 ### Run tests
 
-You can run this tests
+Before running tests, ensure you've set up the test database:
+
+```sh
+bin/rails db:migrate RAILS_ENV=test
+```
+
+**Note:** Given that the aim of this project is to test the application's UI, to see if it works without side effects. We have therefore had to modify the contents of certain files, which could have the effect of falsifying certain `Unit` tests. 
+We therefore recommend that, rather than running all the tests, you only test the `features` folder and run 
+
+```sh
+bundle exec rspec ./spec/features
+
+```
+
+For linters test : 
 
 ```$
   rubocop
