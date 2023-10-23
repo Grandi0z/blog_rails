@@ -23,7 +23,7 @@ RSpec.describe 'Post show page', type: :feature do
   end
 
   it 'I can see how many likes it has' do
-    visit user_post_path(@user1,@post_with_comments)
+    visit user_post_path(@user1, @post_with_comments)
     expect(page).to have_content('Like: 3')
   end
 
