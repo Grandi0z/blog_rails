@@ -13,12 +13,16 @@ class PostsController < ApplicationController
   end
 
   def new
-    @user = current_user
-    @post = @user.posts.new
-    respond_to do |format|
-      format.html { render :new, locals: { post: @post } }
+    if user_signed_in?
+      @user = current_user
+      @post = @user.posts.new
+      respond_to do |format|
+        format.html { render :new, locals: { post: @post } }
+      end
+      puts 'created'
+    else
+      redirect_to new_user_session_path, alert: 'You must be logged in to create a post.'
     end
-    puts 'created'
   end
 
   def create
