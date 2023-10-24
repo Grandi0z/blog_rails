@@ -5,21 +5,38 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= 
+    f.text_field :name, 
+    autofocus: true, 
+    autocomplete: "name",
+    class:"form-control", 
+    placeholder:"Name"
+    %>
   </div>
   
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= 
+    f.email_field :email, 
+    autofocus: true, 
+    autocomplete: "email", 
+    class:"form-control", 
+    placeholder:"Email"
+    %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
+  <div class="field mb-3 form-check">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= 
+    f.password_field :password, 
+    autocomplete: "new-password", 
+    class:"form-control", 
+    placeholder:"Password"
+    %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em>
@@ -28,16 +45,21 @@
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",
+    class:"form-control", 
+    placeholder:"Password confirmation" %>
   </div>
 
   <div class="field">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.password_field :current_password, autocomplete: "current-password", 
+    class:"form-control", 
+    placeholder:"Current password"
+    %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Update" class:"btn btn-primary form-control"%>
   </div>
 <% end %>
 

@@ -15,8 +15,9 @@
   <body>
     <div id = "header">
         <h1>Blog App</h1>
+        <%if current_user.present?%>
         <%= render partial:"partials/navbar"%>
-
+        <%end%>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
     </div>
