@@ -1,4 +1,4 @@
-# <nav class="nav">
+# <nav class="navbar navbar-expand-lg bg-light">
 #   <%= link_to "Home", users_path %> 
 #   <%# If using authentication (like with Devise) %>
 #   <%# if defined?(user_signed_in?) && user_signed_in? %>
@@ -8,6 +8,6 @@
 #     <%#= link_to "Register", new_user_registration_path %>
 #   <%# end %>
 # </nav>
-<nav>
+<nav class="navbar navbar-expand-lg bg-light d-flex justify-content-end">
   <%= button_to "Sign out", destroy_user_session_path, method: :delete%>
 </nav>
