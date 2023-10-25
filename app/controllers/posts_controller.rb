@@ -4,6 +4,10 @@ class PostsController < ApplicationController
     @user = User.includes(posts: :comments).find(params[:user_id])
     @current_user = current_user
     @posts = @user.posts.includes(comments: :author)
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @posts }
+    end
   end
 
   def show

@@ -3,6 +3,10 @@ class CommentsController < ApplicationController
 
   before_action :find_comment, only: [:destroy]
 
+  def index 
+    
+  end
+  
   def new
     @comment = Comment.new(user: current_user, post: @post)
   end
