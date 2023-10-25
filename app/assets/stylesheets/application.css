@@ -1,3 +1,9 @@
+/*
+ *= require custom
+ *= require engine
+ *= require bootstrap_and_overrides
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+*/
 @import "application.bootstrap.scss";
-@import "style.css";
-@import "user_show.css"

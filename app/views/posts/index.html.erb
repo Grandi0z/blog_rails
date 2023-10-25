@@ -1,4 +1,8 @@
 <h1>Here is a list of posts for a given user</h1>
+<%# in case we have flash %>
+<% flash.each do |type, message| %>
+  <div class="alert alert-<%= type %>"><%= message %></div>
+<% end %>
 <div class='user_profil'>
   <%= render partial: "partials/user_profil", locals: { user: @user } %>
   <div class='user_posts'>
@@ -9,6 +13,13 @@
         <li>
           <%= render partial: "partials/post_item", locals: { post: post, index:index } %>
           <%comments=post.five_recents_comments%>
+          <%if can? :delete, post%>
+            <%= button_to "Delete post", 
+              user_post_path(post.author, post), 
+              method: :delete,
+              class:"btn btn-outline-danger btn-del-post"
+            %>
+          <%end%>
           <%= render partial: "partials/comments_list", locals: { comments: comments} %>
         </li>
       <% end %>

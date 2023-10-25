@@ -16,8 +16,8 @@ Rails.application.routes.draw do
   scope "/" do
     resources :users do
       resources :posts do
-        resources :comments, only: [:new, :create]
-        resources :likes, only: [:new, :create]
+        resources :comments, only: [:create, :destroy]
+        resources :likes, only: [:create]
       end
     end
   end

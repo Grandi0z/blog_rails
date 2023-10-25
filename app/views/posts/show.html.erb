@@ -1,25 +1,32 @@
 <h1>Show a posta of a given user</h1>
-<%# in case we have flash %>
+<% # in case we have flash %>
 <% flash.each do |type, message| %>
   <div class="alert alert-<%= type %>"><%= message %></div>
 <% end %>
 <div id="post_container">
   <div class='u_post_reactions'>
-    <span>Comment: <%=@post.comments_counter%>, </span>
-    <span>Like: <%=@post.likes_counter%> </span>
+    <span>Comment: <%= @post.comments_counter %>, </span>
+    <span>Like: <%= @post.likes_counter %> </span>
   </div>
   <div class="post_text">
     <h3>
-      <%=@post.title%>
+      <%= @post.title %>
     </h3>
     <%= @post.text %>
   </div>
   <div id='add_like'>
-    <%=button_to 'Like', user_post_likes_path(@current_user.id, @post), method: :post %>
+    <%= button_to "Like", user_post_likes_path(@current_user.id, @post), method: :post %>
   </div>
   <div id='add_comment'>
-    <%= render 'comments/new' %>
+    <%= render "comments/new" %>
   </div>
-  <%= render partial: "partials/comments_list", locals: { comments: @comments} %>
+  <%if can? :delete, @post%>
+    <%= button_to "Delete post",
+                  user_post_path(@post.author, @post),
+                
+                  method: :delete,
+                  class: "btn btn-outline-danger btn-del-post"
+    %>
+  <%end%>
+  <%= render partial: "partials/comments_list", locals: { comments: @comments } %>
 </div>
-
