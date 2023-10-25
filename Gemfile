@@ -86,6 +86,5 @@ gem 'cssbundling-rails', '~> 1.3'
 
 gem 'cancancan'
 
-gem 'active_model_serializers'
 
-gem 'jwt'
+gem 'active_model_serializers', '~> 0.10.13'
