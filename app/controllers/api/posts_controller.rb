@@ -1,6 +1,6 @@
 module Api
   class PostsController < ApplicationController
-    before_action :set_user, :set_post
+    before_action :set_user
 
     def index
       @posts = @user.posts
@@ -8,6 +8,7 @@ module Api
     end
 
     def show
+      @post = @user.posts.find(params[:id])
       render json: @post
     end
 
@@ -15,10 +16,6 @@ module Api
 
     def set_user
       @user = User.find(params[:user_id])
-    end
-
-    def set_post
-      @post = @user.posts.find(params[:id])
     end
   end
 end
