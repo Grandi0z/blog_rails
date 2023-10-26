@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  load_and_authorize_resource
+  before_action :set_user
   def index
-    @user = User.includes(posts: :comments).find(params[:user_id])
     @current_user = current_user
     @posts = @user.posts.includes(comments: :author)
   end
@@ -52,5 +51,11 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text, :author_id)
+  end
+
+  private
+
+  def set_user
+    @user = User.includes(posts: :comments).find(params[:user_id])
   end
 end
