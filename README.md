@@ -10,10 +10,12 @@
 
 # 📗 Table of Contents
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 Cents sense ](#-cents-sense-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#-live-demo)
+  - [🚀 Video Demo](#-video-demo)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -28,9 +30,9 @@
   - [📝 License ](#-license-)
 
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Cents sense <a name="about-project"></a>
 
-**Blog app** is a web application that allows users to create and share their own blogs with the world. Users can sign up for a free account, create a profile with their name, photo, and bio, and start posting their thoughts, opinions, stories, or anything else they want to share. Users can also comment on other users’ posts, like them, and follow their favorite bloggers. Blog app is a platform for expressing yourself, connecting with others, and discovering new perspectives. Blog app is easy to use, secure, and fun. Whether you are a beginner or a seasoned blogger, Blog app is the app for you..
+**Cents sense** is a mobile web application that helps you manage your budget and track your transactions. You can register and log in with your full name, email and password, and access your personal data securely. You can add new transactions associated with a category, such as food, entertainment, or rent. You can also see the total amount of money spent on each category, and compare your expenses with your income. Cents Sense is a simple and smart way to make sense of your money and save more.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,10 +49,17 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Login**
-- **Create a post**
-- **Comment to other's users posts**
-- **Like other's users posts**
+- **It allows you to register and log in with your full name, email and password, so that your data is private and secure.**
+- **It lets you introduce new transactions associated with a category, such as food, entertainment, or rent, and see the details of each transaction, such as the date, amount, and description**
+- **It shows you the total amount of money spent on each category, and the percentage of your budget that each category represents, so that you can see how you allocate your money and where you can save more.**
+- **It provides you with a simple and user-friendly interface, with a splash screen, a home page, and a transactions page, that follow the design guidelines of Snapscan, a popular mobile payment app**
+- **It is a mobile web application that you can access from any device with a browser, without the need of installing anything**
+
+## 🚀 Live Demo 
+<a name="live-demo" href="https://cents-sense.onrender.com/">Demo</a>
+
+## 🚀 Video Demo 
+<a name="video-demo" href="https://www.loom.com/share/2e8dec528290409cbf1cc6afc525199b?sid=f3a400e4-4104-46d1-b3d5-665402286f59">Video Demo</a>
 
 ## Getting Started
 
@@ -69,7 +78,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git@github.com:MasumaJaffery/Enumerable.git
+  git clone https://github.com/Grandi0z/Recipe_app.git
 ```
  
 --->
@@ -99,11 +108,8 @@ Before running tests, ensure you've set up the test database:
 bin/rails db:migrate RAILS_ENV=test
 ```
 
-**Note:** Given that the aim of this project is to test the application's UI, to see if it works without side effects. We have therefore had to modify the contents of certain files, which could have the effect of falsifying certain `Unit` tests. 
-We therefore recommend that, rather than running all the tests, you only test the `features` folder and run 
-
 ```sh
-bundle exec rspec ./spec/features
+bundle exec rspec ./spec
 
 ```
 
@@ -137,8 +143,9 @@ You can deploy this project using: GitHub Pages Netifly or Render
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Create a user account**
-- [ ] **Add a UI**
+- [ ] **Integration with payment services: This feature would allow you to link your bank accounts and credit cards to the app, and automatically import and categorize your transactions. This would save you time and effort from manually entering each transaction, and also give you a more accurate picture of your spending habits**
+- [ ] **Data visualization: This feature would enable you to see your budget and transactions in a graphical and interactive way, such as charts, graphs, and dashboards. This would help you to better understand your financial situation, identify trends and patterns, and compare your performance with your goals**
+- [ ] **AI-powered financial assistance: This feature would use artificial intelligence and machine learning to provide you with personalized and smart financial advice, such as how to optimize your budget, save more money, reduce your debt, and invest wisely. This would help you to improve your financial literacy, make better decisions, and achieve your financial goals faster.**
 
 <!-- CONTRIBUTING -->
 
@@ -146,7 +153,7 @@ You can deploy this project using: GitHub Pages Netifly or Render
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Grandi0z/blog_app/issues).
+Feel free to check the [issues page](https://github.com/Grandi0z/cents_sense/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -162,7 +169,7 @@ If you like this project, I would like to Thank You!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Special Thanks to the Microverse and Micronauts.
+special thanks to [Microverse](https://www.microverse.org/) for providing us with the essential materials for this project and to [Gregoire Vella](https://www.behance.net/gregoirevella) for creating this design.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -171,6 +178,6 @@ Special Thanks to the Microverse and Micronauts.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Grandi0z/blog_rails/blob/dev/LICENSE) licensed.
+This project is [MIT](https://github.com/Grandi0z/cents_sense/blob/dev/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
