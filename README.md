@@ -95,7 +95,7 @@ Run the following command inside the project folder:
 1. Open your terminal and navigate to the root directory of your project.
 2. run ```$ rails server```
 3. open your navigator
-4. Go to ```http://localhost:3000/```
+4. Go to ```http://localhost:300/```
 5. Enjoy
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
